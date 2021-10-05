@@ -1,0 +1,37 @@
+plugins {
+    id 'com.dorongold.task-tree' version '1.5'
+    id 'org.openapi.generator' version '4.3.0'
+}
+
+openApiValidate {
+    inputSpec = "$rootDir/openapi.json".toString()
+}
+
+openApiGenerate {
+    generatorName = 'java'
+    inputSpec = file('openapi.json').absolutePath
+    outputDir = file('client').absolutePath
+    templateDir = file('template').absolutePath
+
+	invokerPackage = 'com.mwaysolutions.bluerange'
+	apiPackage = 'com.mwaysolutions.bluerange.api'
+	modelPackage = 'com.mwaysolutions.bluerange.model'
+	importMappings = [
+		AnyValue: 'com.fasterxml.jackson.databind.JsonNode',
+		JsonNode: 'com.fasterxml.jackson.databind.JsonNode',
+		Throwable: 'com.fasterxml.jackson.databind.JsonNode',
+		Exception: 'com.fasterxml.jackson.databind.JsonNode',
+		ValidationException: 'com.fasterxml.jackson.databind.JsonNode'
+	]
+
+    configOptions = [
+        java8: 'true',
+        library: 'native',
+        dateLibrary: 'java8',
+        openApiNullable: 'true',
+        useBeanValidation: 'true',
+        performBeanValidation: 'false',
+        useGzipFeature: 'true',
+        useRuntimeException: 'true'
+    ]
+ }
