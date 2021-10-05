@@ -1,1 +1,8 @@
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+
 include ':client'
+include ':sample'
