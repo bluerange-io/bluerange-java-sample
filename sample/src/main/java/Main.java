@@ -2,8 +2,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.mwaysolutions.bluerange.ApiClient;
 import com.mwaysolutions.bluerange.ApiException;
-import com.mwaysolutions.bluerange.api.AuthApi;
-import com.mwaysolutions.bluerange.api.AuthenticationV2Api;
 import com.mwaysolutions.bluerange.api.DevicesApi;
 import com.mwaysolutions.bluerange.api.IotActuatorApi;
 import com.mwaysolutions.bluerange.model.ActuatorDataRequest;
