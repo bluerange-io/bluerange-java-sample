@@ -6,7 +6,7 @@ The program is implemented by [Main.java](sample/src/main/java/Main.java). All c
 
 ## Building the software
 
-After cloning, the initial code generation of client from [openapi.json](./openapi.json) file:
+After cloning, run the initial code generation of client from [openapi.json](./openapi.json) file:
 
 ```sh
 $ ./gradlew openApiGenerate
